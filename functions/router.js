@@ -1,9 +1,6 @@
 const router = require('express').Router();
-const episodes = require('./routes/episodes');
-const episodeIndex = require('./routes/episodeIndex');
-
+const episodes = require('./episodes');
 
 router.get("/episodes", episodes);
-router.get('/episode-index/:index', episodeIndex)
 
 module.exports = router;
