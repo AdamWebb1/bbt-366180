@@ -1,7 +1,7 @@
 const bbt = require("big-bang-theory")
 
 function hasWord(episode, word){
-    return bbt._embedded.episodes[episode].name.toLowerCase().indexOf(word) != -1
+    return bbt._embedded.episodes[episode].summary.toLowerCase().indexOf(word) != -1
 }
 
 function generateResp(word){
@@ -16,11 +16,11 @@ function generateResp(word){
     return response
 }
 
-const inTitle = (req, res) => {
+const inDescription = (req, res) => {
     res.status(200).json({
       success: true,
       data: generateResp(req.params.word)
     })
   }
   
-module.exports = inTitle;
+module.exports = inDescription;
