@@ -12,6 +12,7 @@ function generateResp(word){
             response.push( bbt._embedded.episodes[episode])
         }
     }
+    
     console.log(response)
     return response
 }
